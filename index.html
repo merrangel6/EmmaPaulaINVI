@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffb9dc" />
+    <title>Emma & Paula | Invitación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true">
+      <span class="cloud cloud-1"></span>
+      <span class="cloud cloud-2"></span>
+      <span class="cloud cloud-3"></span>
+      <span class="sparkle sparkle-1"></span>
+      <span class="sparkle sparkle-2"></span>
+      <span class="sparkle sparkle-3"></span>
+      <span class="balloon balloon-1"></span>
+      <span class="balloon balloon-2"></span>
+      <span class="balloon balloon-3"></span>
+      <span class="rainbow-arc"></span>
+    </div>
+
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+    <img class="page-pony page-pony-top" src="pony 2.png" alt="" aria-hidden="true" />
+    <span class="page-mark page-mark-bottom" aria-hidden="true">✿</span>
+
+    <section class="intro" id="intro">
+      <div class="intro-card">
+        <div class="mini-icons" aria-hidden="true">
+          <span>★</span><span>☾</span><span>✦</span>
+        </div>
+        <div class="envelope" id="envelope" aria-hidden="true">
+          <div class="envelope-back"></div>
+          <div class="letter">
+            <span>Emma & Paula</span>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+        </div>
+        <p class="intro-kicker">Una tarde mágica está por comenzar</p>
+        <h1>Emma & Paula</h1>
+        <button class="primary-button" id="openInvite" type="button">
+          <span class="button-icon">✦</span>
+          Abrir Invitación
+        </button>
+      </div>
+    </section>
+
+    <main class="invitation" id="invitation" aria-hidden="true">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <div class="birthday-names" aria-label="Emma y Paula">
+            <span class="name-pop name-emma">Emma</span>
+            <span class="name-amp">&</span>
+            <span class="name-pop name-paula">Paula</span>
+          </div>
+          <div class="age-badges" aria-label="Edades">
+            <span>2 añitos</span>
+            <span>6 añitos</span>
+          </div>
+          <p class="subtitle">¡Te invitamos a celebrar con nosotras!</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="https://maps.app.goo.gl/qetEH2jpBCJqVQtW9?g_st=awb" target="_blank" rel="noreferrer">
+              <span class="button-icon">⌖</span>
+              Ver ubicación
+            </a>
+            <button class="ghost-button" id="musicToggle" type="button" aria-pressed="true">
+              <span class="button-icon">♪</span>
+              Música
+            </button>
+          </div>
+        </div>
+        <div class="character-stage" aria-label="Emma y Paula con personajes de fantasia">
+          <img class="frame-logo" src="logo.png" alt="My Little Pony" />
+          <img
+            class="pony-pop pony-wing"
+            src="pony 3.png"
+            alt="Pony decorativo"
+          />
+          <div class="photo-frame">
+            <img class="birthday-photo" src="unnamed.jpg" alt="Emma y Paula, las cumpleañeras" />
+          </div>
+          <span class="cutie-mark mark-heart" aria-hidden="true">♡</span>
+          <span class="cutie-mark mark-star" aria-hidden="true">☆</span>
+          <span class="cutie-mark mark-flower" aria-hidden="true">✿</span>
+          <span class="cutie-mark mark-spark" aria-hidden="true">✦</span>
+          <img class="pony-pop pony-group" src="pony 2.png" alt="Pony decorativo" />
+        </div>
+      </section>
+
+      <section class="details-band" aria-label="Datos del evento">
+        <img
+          class="section-pony section-pony-left"
+          src="pony 2.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="section-pony section-pony-right"
+          src="pony 3.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <article class="glass-card detail-card">
+          <span class="detail-icon">☀</span>
+          <small>Fecha</small>
+          <strong>Viernes 3 de julio 2026</strong>
+        </article>
+        <article class="glass-card detail-card">
+          <span class="detail-icon">◷</span>
+          <small>Horario</small>
+          <strong>7:00 PM a 10:00 PM</strong>
+        </article>
+        <article class="glass-card detail-card">
+          <span class="detail-icon">☆</span>
+          <small>Lugar</small>
+          <strong>Salón Yamos Party</strong>
+        </article>
+      </section>
+
+      <section class="countdown-section">
+        <span class="countdown-pony" aria-hidden="true">✿</span>
+        <div class="section-heading">
+          <p class="eyebrow">Cuenta regresiva</p>
+          <h3>Falta muy poquito</h3>
+        </div>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div><strong id="days">00</strong><span>Días</span></div>
+          <div><strong id="hours">00</strong><span>Horas</span></div>
+          <div><strong id="minutes">00</strong><span>Min</span></div>
+          <div><strong id="seconds">00</strong><span>Seg</span></div>
+        </div>
+      </section>
+
+      <section class="rsvp-section" id="rsvp">
+        <div class="section-heading">
+          <p class="eyebrow">RSVP</p>
+          <h3>Confirma tu asistencia</h3>
+        </div>
+        <form class="glass-card rsvp-form" id="rsvpForm">
+          <label>
+            Nombre completo
+            <input name="nombre" type="text" autocomplete="name" required />
+          </label>
+          <div class="form-grid">
+            <label>
+              Número de adultos
+              <input name="adultos" type="number" min="0" value="1" required />
+            </label>
+            <label>
+              Número de niños
+              <input name="ninos" type="number" min="0" value="0" required />
+            </label>
+          </div>
+          <label>
+            Comentarios
+            <textarea name="comentarios" rows="4" placeholder="Alergias, dudas o mensaje especial"></textarea>
+          </label>
+          <button class="primary-button wide" type="submit">
+            <span class="button-icon">★</span>
+            Confirmar asistencia
+          </button>
+          <p class="thanks-message" id="thanksMessage" role="status"></p>
+        </form>
+      </section>
+
+      <section class="admin-section">
+        <details class="admin-panel">
+          <summary aria-label="Panel administrativo">⚙</summary>
+          <div class="admin-login" id="adminLogin">
+            <label>
+              Contraseña
+              <input id="adminPassword" type="password" autocomplete="current-password" />
+            </label>
+            <button class="ghost-button" id="adminAccess" type="button">Entrar</button>
+          </div>
+          <div class="admin-content" id="adminContent" hidden>
+            <div class="admin-stats">
+              <div><strong id="totalGuests">0</strong><span>Registros</span></div>
+              <div><strong id="totalPeople">0</strong><span>Asistentes</span></div>
+              <div><strong id="totalAdults">0</strong><span>Adultos</span></div>
+              <div><strong id="totalKids">0</strong><span>Niños</span></div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Adultos</th>
+                    <th>Niños</th>
+                    <th>Comentarios</th>
+                  </tr>
+                </thead>
+                <tbody id="guestRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
